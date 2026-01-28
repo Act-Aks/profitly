@@ -1,0 +1,9 @@
+[install]
+exact = true
+
+[install.cache]
+dir = ".bun/cache"
+disable = false
+disableManifest = false
+
+telemetry = false

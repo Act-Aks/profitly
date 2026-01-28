@@ -1,0 +1,47 @@
+{
+  "expo": {
+    "scheme": "profitly",
+    "userInterfaceStyle": "automatic",
+    "orientation": "default",
+    "name": "Profitly",
+    "slug": "Profitly",
+    "owner": "act-aks",
+    "ios": {
+      "bundleIdentifier": "com.actaks.profitly",
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "com.actaks.profitly",
+      "edgeToEdgeEnabled": true
+    },
+    "icon": "./assets/images/icon.png",
+    "plugins": [
+      "expo-router",
+      "expo-notifications",
+      "expo-sqlite",
+      [
+        "expo-file-system",
+        {
+          "supportsOpeningDocumentsInPlace": true,
+          "enableFileSharing": true
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#232323",
+          "image": "./assets/images/icon.png",
+          "dark": {
+            "image": "./assets/images/icon.png",
+            "backgroundColor": "#000000"
+          },
+          "imageWidth": 400
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    }
+  }
+}
