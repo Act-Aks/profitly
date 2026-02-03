@@ -3,7 +3,26 @@
 
 declare module 'uniwind' {
     export interface UniwindConfig {
-        themes: readonly ['light', 'dark']
+        themes: readonly [
+            'light',
+            'dark',
+            'amethyst-dark',
+            'obsidian-dark',
+            'rose-gold-dark',
+            'emerald-dark',
+            'champagne-dark',
+            'sapphire-dark',
+            'slate-dark',
+            'coral-dark',
+            'amethyst-light',
+            'obsidian-light',
+            'rose-gold-light',
+            'emerald-light',
+            'champagne-light',
+            'sapphire-light',
+            'slate-light',
+            'coral-light',
+        ]
     }
 }
 

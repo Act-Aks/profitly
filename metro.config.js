@@ -4,12 +4,29 @@ const { withUniwindConfig } = require('uniwind/metro') // make sure this import 
 /** @type {import('expo/metro-config').MetroConfig} */
 const config = getDefaultConfig(__dirname)
 
-// Apply uniwind modifications before exporting
+config.resolver.sourceExts.push('sql')
+
 const uniwindConfig = withUniwindConfig(config, {
-    // relative path to your global.css file
     cssEntryFile: './src/global.css',
-    // optional: path to typings
     dtsFile: './src/uniwind-types.d.ts',
+    extraThemes: [
+        'amethyst-dark',
+        'obsidian-dark',
+        'rose-gold-dark',
+        'emerald-dark',
+        'champagne-dark',
+        'sapphire-dark',
+        'slate-dark',
+        'coral-dark',
+        'amethyst-light',
+        'obsidian-light',
+        'rose-gold-light',
+        'emerald-light',
+        'champagne-light',
+        'sapphire-light',
+        'slate-light',
+        'coral-light',
+    ],
 })
 
 module.exports = uniwindConfig

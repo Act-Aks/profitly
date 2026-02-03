@@ -6,9 +6,10 @@ import { StatusBar } from 'expo-status-bar'
 import { HeroUINativeProvider } from 'heroui-native'
 import { GestureHandlerRootView } from 'react-native-gesture-handler'
 import { KeyboardProvider } from 'react-native-keyboard-controller'
+import { ThemeProvider } from '@/components/molecules/ThemeProvider/ThemeProvider'
 import { heroUiNativeConfig } from '@/configs/heroUiNative'
 import { NotificationProvider } from '@/contexts/NotificationContext'
-import { AppThemeProvider } from '@/contexts/ThemeContext'
+import { Database } from '@/utils/database/seed'
 import { AppNotification } from '@/utils/notifications'
 
 AppNotification.initNotificationHandler()
@@ -18,25 +19,27 @@ SplashScreen.setOptions({
     fade: true,
 })
 
+Database.initialize()
+
 function StackLayout() {
     return (
-        <Stack>
-            <Stack.Screen name={'index'} options={{ headerShown: false }} />
+        <Stack screenOptions={{ headerShown: false }}>
+            <Stack.Screen name='(tabs)' />
         </Stack>
     )
 }
 
-export default function Layout() {
+export default function RootLayout() {
     return (
         <GestureHandlerRootView style={{ flex: 1 }}>
             <NotificationProvider>
                 <KeyboardProvider>
-                    <AppThemeProvider>
+                    <ThemeProvider>
                         <HeroUINativeProvider config={heroUiNativeConfig}>
                             <StackLayout />
                             <StatusBar style={'auto'} />
                         </HeroUINativeProvider>
-                    </AppThemeProvider>
+                    </ThemeProvider>
                 </KeyboardProvider>
             </NotificationProvider>
         </GestureHandlerRootView>

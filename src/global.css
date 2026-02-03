@@ -1,5 +1,11 @@
+/** biome-ignore-all lint/suspicious/noDuplicateCustomProperties: Ignore */
 @import "tailwindcss";
 @import "uniwind";
 @import "heroui-native/styles";
+@import "./styles/themes.css";
 
-@source "../../node_modules/heroui-native/lib";
+@source "../node_modules/heroui-native/lib";
+
+@utility bg-gradient-surface {
+    @apply bg-linear-to-b from-surface/50 to-surface/75 transition-all duration-300;
+}
