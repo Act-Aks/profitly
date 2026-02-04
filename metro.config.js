@@ -2,7 +2,7 @@ const { getDefaultConfig } = require('expo/metro-config')
 const { withUniwindConfig } = require('uniwind/metro') // make sure this import exists
 
 /** @type {import('expo/metro-config').MetroConfig} */
-const config = getDefaultConfig(__dirname)
+const config = getDefaultConfig(import.meta.dirname)
 
 config.resolver.sourceExts.push('sql')
 
