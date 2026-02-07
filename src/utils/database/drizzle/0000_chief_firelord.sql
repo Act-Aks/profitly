@@ -75,10 +75,7 @@ CREATE TABLE `trades` (
 );
 --> statement-breakpoint
 CREATE TABLE `users` (
-	`avatar` text,
 	`created_at` integer DEFAULT (unixepoch()) NOT NULL,
-	`currency` text DEFAULT 'USD' NOT NULL,
-	`email` text,
 	`id` text PRIMARY KEY NOT NULL,
 	`name` text NOT NULL,
 	`updated_at` integer DEFAULT (unixepoch()) NOT NULL

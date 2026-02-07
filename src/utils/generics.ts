@@ -1,7 +1,5 @@
 /** biome-ignore-all lint/style/useUnifiedTypeSignatures: This is created for checking various condition */
 
-import { keyof } from 'zod'
-
 /**
  * Function to assert conditions
  * @param condition

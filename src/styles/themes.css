@@ -2,6 +2,7 @@
  * Premium UI Color Themes
  *
  * Available themes:
+ * - light / dark (Base themes)
  * - amethyst-light / amethyst-dark (Purple - Hue: 295)
  * - obsidian-light / obsidian-dark (Neutral - Hue: 265)
  * - rose-gold-light / rose-gold-dark (Warm - Hue: 25)
@@ -16,8 +17,88 @@
 @layer theme {
     :root {
         /* ============================================
-       AMETHYST THEME (Hue: 295)
-       ============================================ */
+           BASE LIGHT THEME
+           ============================================ */
+        @variant light {
+            --background: oklch(0.97 0.008 265);
+            --foreground: oklch(0.18 0.02 265);
+            --surface: oklch(0.99 0.004 265);
+            --surface-foreground: oklch(0.25 0.02 265);
+            --overlay: oklch(0.998 0.002 265);
+            --overlay-foreground: oklch(0.25 0.02 265);
+            --muted: oklch(0.55 0.02 265);
+            --default: oklch(0.94 0.01 265);
+            --default-foreground: oklch(0.35 0.02 265);
+            --accent: oklch(0.55 0.15 265);
+            --accent-foreground: oklch(0.98 0.005 265);
+            --field-background: oklch(0.99 0.004 265);
+            --field-foreground: oklch(0.18 0.02 265);
+            --field-placeholder: var(--muted);
+            --field-border: transparent;
+            --success: oklch(0.72 0.14 165);
+            --success-foreground: oklch(0.25 0.08 165);
+            --warning: oklch(0.78 0.12 85);
+            --warning-foreground: oklch(0.3 0.08 85);
+            --danger: oklch(0.65 0.18 20);
+            --danger-foreground: oklch(0.98 0.005 20);
+            --segment: oklch(0.99 0.004 265);
+            --segment-foreground: oklch(0.18 0.02 265);
+            --border: oklch(0 0 0 / 0%);
+            --divider: oklch(0.92 0.008 265);
+            --separator: oklch(0.9 0.01 265);
+            --focus: oklch(0.6 0.18 265);
+            --link: oklch(0.45 0.12 265);
+            --surface-shadow:
+                0 2px 4px 0 rgba(0, 0, 0, 0.03),
+                0 1px 2px 0 rgba(0, 0, 0, 0.04), 0 0 1px 0 rgba(0, 0, 0, 0.05);
+            --overlay-shadow:
+                0 4px 16px 0 rgba(0, 0, 0, 0.06),
+                0 8px 24px 0 rgba(0, 0, 0, 0.08);
+            --field-shadow:
+                0 2px 4px 0 rgba(0, 0, 0, 0.03),
+                0 1px 2px 0 rgba(0, 0, 0, 0.04), 0 0 1px 0 rgba(0, 0, 0, 0.05);
+        }
+
+        /* ============================================
+           BASE DARK THEME
+           ============================================ */
+        @variant dark {
+            --background: oklch(0.12 0.015 265);
+            --foreground: oklch(0.92 0.008 265);
+            --surface: oklch(0.17 0.018 265);
+            --surface-foreground: oklch(0.88 0.01 265);
+            --overlay: oklch(0.2 0.02 265);
+            --overlay-foreground: oklch(0.88 0.01 265);
+            --muted: oklch(0.52 0.02 265);
+            --default: oklch(0.22 0.022 265);
+            --default-foreground: oklch(0.85 0.012 265);
+            --accent: oklch(0.7 0.16 265);
+            --accent-foreground: oklch(0.12 0.015 265);
+            --field-background: var(--default);
+            --field-foreground: var(--foreground);
+            --field-placeholder: var(--muted);
+            --field-border: transparent;
+            --success: oklch(0.68 0.16 165);
+            --success-foreground: oklch(0.95 0.008 165);
+            --warning: oklch(0.75 0.14 90);
+            --warning-foreground: oklch(0.2 0.04 90);
+            --danger: oklch(0.65 0.2 20);
+            --danger-foreground: oklch(0.95 0.008 20);
+            --segment: oklch(0.19 0.02 265);
+            --segment-foreground: oklch(0.88 0.01 265);
+            --border: oklch(0 0 0 / 0%);
+            --divider: oklch(0.26 0.02 265);
+            --separator: oklch(0.28 0.022 265);
+            --focus: oklch(0.7 0.18 265);
+            --link: oklch(0.75 0.12 265);
+            --surface-shadow: 0 0 0 0 transparent inset;
+            --overlay-shadow: 0 0 0 0 transparent inset;
+            --field-shadow: 0 0 0 0 transparent inset;
+        }
+
+        /* ============================================
+           AMETHYST THEME (Hue: 295)
+           ============================================ */
         @variant amethyst-light {
             --background: oklch(0.96 0.012 295);
             --foreground: oklch(0.22 0.045 295);
@@ -44,6 +125,8 @@
             --segment-foreground: oklch(0.22 0.045 295);
             --border: oklch(0 0 0 / 0%);
             --divider: oklch(0.9 0.015 295);
+            --separator: oklch(0.88 0.018 295);
+            --focus: oklch(0.58 0.22 295);
             --link: oklch(0.55 0.2 295);
             --surface-shadow:
                 0 2px 4px 0 rgba(88, 28, 135, 0.04),
@@ -84,6 +167,8 @@
             --segment-foreground: oklch(0.9 0.015 295);
             --border: oklch(0 0 0 / 0%);
             --divider: oklch(0.28 0.042 295);
+            --separator: oklch(0.3 0.044 295);
+            --focus: oklch(0.72 0.2 295);
             --link: oklch(0.72 0.18 295);
             --surface-shadow: 0 0 0 0 transparent inset;
             --overlay-shadow: 0 0 0 0 transparent inset;
@@ -91,8 +176,8 @@
         }
 
         /* ============================================
-       OBSIDIAN THEME (Hue: 265)
-       ============================================ */
+           OBSIDIAN THEME (Hue: 265)
+           ============================================ */
         @variant obsidian-light {
             --background: oklch(0.97 0.008 265);
             --foreground: oklch(0.18 0.02 265);
@@ -119,6 +204,8 @@
             --segment-foreground: oklch(0.18 0.02 265);
             --border: oklch(0 0 0 / 0%);
             --divider: oklch(0.92 0.008 265);
+            --separator: oklch(0.9 0.01 265);
+            --focus: oklch(0.45 0.08 265);
             --link: oklch(0.45 0.12 265);
             --surface-shadow:
                 0 2px 4px 0 rgba(0, 0, 0, 0.03),
@@ -157,6 +244,8 @@
             --segment-foreground: oklch(0.88 0.01 265);
             --border: oklch(0 0 0 / 0%);
             --divider: oklch(0.26 0.02 265);
+            --separator: oklch(0.28 0.022 265);
+            --focus: oklch(0.85 0.02 265);
             --link: oklch(0.75 0.12 265);
             --surface-shadow: 0 0 0 0 transparent inset;
             --overlay-shadow: 0 0 0 0 transparent inset;
@@ -164,8 +253,8 @@
         }
 
         /* ============================================
-       SAPPHIRE THEME (Hue: 250)
-       ============================================ */
+           SAPPHIRE THEME (Hue: 250)
+           ============================================ */
         @variant sapphire-light {
             --background: oklch(0.96 0.018 250);
             --foreground: oklch(0.2 0.05 250);
@@ -192,6 +281,8 @@
             --segment-foreground: oklch(0.2 0.05 250);
             --border: oklch(0 0 0 / 0%);
             --divider: oklch(0.9 0.02 250);
+            --separator: oklch(0.88 0.022 250);
+            --focus: oklch(0.55 0.22 250);
             --link: oklch(0.52 0.2 250);
             --surface-shadow:
                 0 2px 4px 0 rgba(30, 30, 100, 0.05),
@@ -232,6 +323,8 @@
             --segment-foreground: oklch(0.9 0.015 250);
             --border: oklch(0 0 0 / 0%);
             --divider: oklch(0.26 0.05 250);
+            --separator: oklch(0.28 0.052 250);
+            --focus: oklch(0.72 0.2 250);
             --link: oklch(0.73 0.18 250);
             --surface-shadow: 0 0 0 0 transparent inset;
             --overlay-shadow: 0 0 0 0 transparent inset;
@@ -239,8 +332,8 @@
         }
 
         /* ============================================
-       EMERALD THEME (Hue: 160)
-       ============================================ */
+           EMERALD THEME (Hue: 160)
+           ============================================ */
         @variant emerald-light {
             --background: oklch(0.96 0.015 160);
             --foreground: oklch(0.2 0.045 160);
@@ -267,6 +360,8 @@
             --segment-foreground: oklch(0.2 0.045 160);
             --border: oklch(0 0 0 / 0%);
             --divider: oklch(0.9 0.018 160);
+            --separator: oklch(0.88 0.02 160);
+            --focus: oklch(0.58 0.15 160);
             --link: oklch(0.48 0.14 160);
             --surface-shadow:
                 0 2px 4px 0 rgba(5, 90, 70, 0.04),
@@ -307,6 +402,8 @@
             --segment-foreground: oklch(0.9 0.018 160);
             --border: oklch(0 0 0 / 0%);
             --divider: oklch(0.27 0.038 160);
+            --separator: oklch(0.29 0.04 160);
+            --focus: oklch(0.72 0.16 160);
             --link: oklch(0.72 0.15 160);
             --surface-shadow: 0 0 0 0 transparent inset;
             --overlay-shadow: 0 0 0 0 transparent inset;
@@ -314,8 +411,8 @@
         }
 
         /* ============================================
-       ROSE GOLD THEME (Hue: 25)
-       ============================================ */
+           ROSE GOLD THEME (Hue: 25)
+           ============================================ */
         @variant rose-gold-light {
             --background: oklch(0.97 0.012 25);
             --foreground: oklch(0.22 0.04 25);
@@ -342,6 +439,8 @@
             --segment-foreground: oklch(0.22 0.04 25);
             --border: oklch(0 0 0 / 0%);
             --divider: oklch(0.91 0.015 25);
+            --separator: oklch(0.89 0.018 25);
+            --focus: oklch(0.68 0.15 25);
             --link: oklch(0.58 0.15 25);
             --surface-shadow:
                 0 2px 4px 0 rgba(139, 69, 69, 0.04),
@@ -382,6 +481,8 @@
             --segment-foreground: oklch(0.9 0.018 25);
             --border: oklch(0 0 0 / 0%);
             --divider: oklch(0.28 0.035 25);
+            --separator: oklch(0.3 0.038 25);
+            --focus: oklch(0.75 0.15 25);
             --link: oklch(0.75 0.14 25);
             --surface-shadow: 0 0 0 0 transparent inset;
             --overlay-shadow: 0 0 0 0 transparent inset;
@@ -389,8 +490,8 @@
         }
 
         /* ============================================
-       CHAMPAGNE THEME (Hue: 70)
-       ============================================ */
+           CHAMPAGNE THEME (Hue: 70)
+           ============================================ */
         @variant champagne-light {
             --background: oklch(0.97 0.015 70);
             --foreground: oklch(0.2 0.035 70);
@@ -417,6 +518,8 @@
             --segment-foreground: oklch(0.2 0.035 70);
             --border: oklch(0 0 0 / 0%);
             --divider: oklch(0.91 0.018 70);
+            --separator: oklch(0.89 0.02 70);
+            --focus: oklch(0.65 0.14 70);
             --link: oklch(0.55 0.13 70);
             --surface-shadow:
                 0 2px 4px 0 rgba(120, 100, 40, 0.04),
@@ -457,6 +560,8 @@
             --segment-foreground: oklch(0.9 0.018 70);
             --border: oklch(0 0 0 / 0%);
             --divider: oklch(0.28 0.032 70);
+            --separator: oklch(0.3 0.035 70);
+            --focus: oklch(0.78 0.14 70);
             --link: oklch(0.78 0.13 70);
             --surface-shadow: 0 0 0 0 transparent inset;
             --overlay-shadow: 0 0 0 0 transparent inset;
@@ -464,8 +569,8 @@
         }
 
         /* ============================================
-       SLATE THEME (Hue: 240)
-       ============================================ */
+           SLATE THEME (Hue: 240)
+           ============================================ */
         @variant slate-light {
             --background: oklch(0.97 0.006 240);
             --foreground: oklch(0.18 0.02 240);
@@ -492,6 +597,8 @@
             --segment-foreground: oklch(0.18 0.02 240);
             --border: oklch(0 0 0 / 0%);
             --divider: oklch(0.92 0.006 240);
+            --separator: oklch(0.9 0.008 240);
+            --focus: oklch(0.58 0.16 240);
             --link: oklch(0.52 0.14 240);
             --surface-shadow:
                 0 2px 4px 0 rgba(15, 23, 42, 0.04),
@@ -532,6 +639,8 @@
             --segment-foreground: oklch(0.89 0.01 240);
             --border: oklch(0 0 0 / 0%);
             --divider: oklch(0.27 0.028 240);
+            --separator: oklch(0.29 0.03 240);
+            --focus: oklch(0.72 0.16 240);
             --link: oklch(0.72 0.15 240);
             --surface-shadow: 0 0 0 0 transparent inset;
             --overlay-shadow: 0 0 0 0 transparent inset;
@@ -539,8 +648,8 @@
         }
 
         /* ============================================
-       CORAL THEME (Hue: 15)
-       ============================================ */
+           CORAL THEME (Hue: 15)
+           ============================================ */
         @variant coral-light {
             --background: oklch(0.97 0.01 15);
             --foreground: oklch(0.22 0.04 15);
@@ -567,6 +676,8 @@
             --segment-foreground: oklch(0.22 0.04 15);
             --border: oklch(0 0 0 / 0%);
             --divider: oklch(0.91 0.012 15);
+            --separator: oklch(0.89 0.015 15);
+            --focus: oklch(0.7 0.18 15);
             --link: oklch(0.6 0.17 15);
             --surface-shadow:
                 0 2px 4px 0 rgba(180, 83, 60, 0.04),
@@ -607,6 +718,8 @@
             --segment-foreground: oklch(0.9 0.015 15);
             --border: oklch(0 0 0 / 0%);
             --divider: oklch(0.28 0.035 15);
+            --separator: oklch(0.3 0.038 15);
+            --focus: oklch(0.75 0.18 15);
             --link: oklch(0.75 0.17 15);
             --surface-shadow: 0 0 0 0 transparent inset;
             --overlay-shadow: 0 0 0 0 transparent inset;

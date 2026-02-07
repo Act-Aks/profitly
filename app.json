@@ -8,6 +8,9 @@
     "owner": "act-aks",
     "ios": {
       "bundleIdentifier": "com.actaks.profitly",
+      "infoPlist": {
+        "NSFaceIDUsageDescription": "Unlock Profitly with Face ID"
+      },
       "supportsTablet": true
     },
     "android": {

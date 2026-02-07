@@ -5,8 +5,22 @@
     {
       "idx": 0,
       "version": "6",
-      "when": 1770122490190,
-      "tag": "0000_round_kat_farrell",
+      "when": 1770213394285,
+      "tag": "0000_chief_firelord",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1770374528989,
+      "tag": "0001_equal_gambit",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1770375265780,
+      "tag": "0002_slimy_pride",
       "breakpoints": true
     }
   ]

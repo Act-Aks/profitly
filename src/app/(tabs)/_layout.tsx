@@ -31,6 +31,15 @@ export default function TabLayout() {
                 }}
             />
             <Tabs.Screen
+                name='import'
+                options={{
+                    tabBarIcon: ({ color, size }) => (
+                        <Ionicons color={color} name={'document'} size={size} />
+                    ),
+                    title: 'Statements',
+                }}
+            />
+            <Tabs.Screen
                 name='settings'
                 options={{
                     tabBarIcon: ({ color, size }) => (

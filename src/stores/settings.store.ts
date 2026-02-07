@@ -10,6 +10,7 @@ interface SettingsState {
     isBiometricLockEnabled: boolean
     isHapticFeedbackEnabled: boolean
     isNotificationsEnabled: boolean
+    isOnboardingCompleted: boolean
     themeColorMode: ThemeColorMode
     themeName: ThemeName
 
@@ -19,6 +20,7 @@ interface SettingsState {
     setCurrency: (currency: string, symbol: string) => void
     setHapticFeedback: (isHapticFeedbackEnabled: boolean) => void
     setNotifications: (isNotificationsEnabled: boolean) => void
+    setOnboardingCompleted: (isOnboardingCompleted: boolean) => void
     setThemeColorMode: (themeColorMode: ThemeColorMode) => void
     setThemeName: (themeName: ThemeName) => void
 }
@@ -29,6 +31,7 @@ const defaultSettings = {
     isBiometricLockEnabled: false,
     isHapticFeedbackEnabled: true,
     isNotificationsEnabled: true,
+    isOnboardingCompleted: false,
     themeColorMode: 'dark',
     themeName: 'sapphire',
 } satisfies ExcludeFunctions<SettingsState>
@@ -42,6 +45,7 @@ export const useSettingsStore = create<SettingsState>()(
             setCurrency: (currency, symbol) => setState({ currency, currencySymbol: symbol }),
             setHapticFeedback: isHapticFeedbackEnabled => setState({ isHapticFeedbackEnabled }),
             setNotifications: isNotificationsEnabled => setState({ isNotificationsEnabled }),
+            setOnboardingCompleted: isOnboardingCompleted => setState({ isOnboardingCompleted }),
             setThemeColorMode: themeColorMode => setState({ themeColorMode }),
             setThemeName: themeName => setState({ themeName }),
         }),
@@ -54,6 +58,7 @@ export const useSettingsStore = create<SettingsState>()(
                 isBiometricLockEnabled: state.isBiometricLockEnabled,
                 isHapticFeedbackEnabled: state.isHapticFeedbackEnabled,
                 isNotificationsEnabled: state.isNotificationsEnabled,
+                isOnboardingCompleted: state.isOnboardingCompleted,
                 themeColorMode: state.themeColorMode,
                 themeName: state.themeName,
             }),
